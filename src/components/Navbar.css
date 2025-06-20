@@ -1,10 +1,13 @@
-/* Glassmorphism effect for navbar */
+/* Clean glassmorphism + glow without dividing line */
 .glass-navbar {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(255, 76, 204, 0.25); /* soft pink-blue glow */
+  border: none; /* remove bottom border that was dividing */
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 1rem;
+  border-radius: 16px;
 }
 
 /* Red glow effect on hover */
@@ -16,4 +19,10 @@
     0 0 10px #ff3c3c,
     0 0 15px #ff3c3c;
   transition: all 0.3s ease-in-out;
+}
+
+/* Optional smooth nav link transition */
+.glow-link {
+  position: relative;
+  transition: all 0.3s ease;
 }
