@@ -1,0 +1,19 @@
+/* Glassmorphism effect for navbar */
+.glass-navbar {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Red glow effect on hover */
+.navbar .nav-link.glow-link:hover,
+.navbar .nav-link.glow-link:focus {
+  color: #ff3c3c !important;
+  text-shadow:
+    0 0 5px #ff3c3c,
+    0 0 10px #ff3c3c,
+    0 0 15px #ff3c3c;
+  transition: all 0.3s ease-in-out;
+}
