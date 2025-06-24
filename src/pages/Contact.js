@@ -1,17 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import profileImage from "../assets/me.png"; // Replace with your own image
+import PlanetParticles from "./PlanetParticles";
 
 const Contact = () => {
   const formRef = useRef();
   const [sent, setSent] = useState(false);
 
-  const particlesInit = async (engine) => {
+  const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
-  };
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -79,6 +80,8 @@ const Contact = () => {
           height: "100%",
         }}
       />
+      {/* Planet Forming Animation (3D) */}
+      <PlanetParticles />
 
       <div
         className="container d-flex justify-content-center align-items-center flex-column"
@@ -118,6 +121,7 @@ const Contact = () => {
                 marginBottom: "1rem",
               }}
             />
+
             <h3>Tshepo Setuke</h3>
             <p style={{ opacity: 0.7 }}>Let's get in touch 👇</p>
           </div>

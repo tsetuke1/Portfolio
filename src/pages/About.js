@@ -225,16 +225,35 @@ const About = () => {
           textAlign: "center",
         }}
       >
-        <h2 className="mb-4 display-5 fw-bold">About Me</h2>
-        <p className="lead">
+        <motion.h2
+          className="mb-4 display-5 fw-bold"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          About Me
+        </motion.h2>
+
+        <motion.p
+          className="lead"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+        >
           I’m <strong>Tshepo Setuke</strong>, a passionate software developer
           skilled in technologies like React, Node.js, and JavaScript. I love
           building engaging web experiences and continuously learning new tools
           that push the boundaries of creativity and performance.
-        </p>
-        <p className="lead">
+        </motion.p>
+
+        <motion.p
+          className="lead"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.4 }}
+        >
           Built by Tshwane University of Technology, Trusted by ICEP!
-        </p>
+        </motion.p>
 
         {/* Floating Spaceman */}
         <motion.img

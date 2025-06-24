@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
+import PlanetParticles from "./PlanetParticles";
 
 const Hero = () => {
   const particlesInit = async (engine) => {
@@ -11,7 +12,11 @@ const Hero = () => {
   return (
     <section
       className="position-relative text-white"
-      style={{ backgroundColor: "#000", minHeight: "100vh", overflow: "hidden" }}
+      style={{
+        backgroundColor: "#000",
+        minHeight: "100vh",
+        overflow: "hidden",
+      }}
     >
       {/* Starry Particles Background */}
       <Particles
@@ -71,6 +76,9 @@ const Hero = () => {
         }}
       />
 
+      {/* Planet Forming Animation (3D) */}
+      <PlanetParticles />
+
       {/* Hero Content with Glassmorphism */}
       <div
         className="d-flex flex-column justify-content-center align-items-center text-center p-5"
@@ -94,7 +102,8 @@ const Hero = () => {
         >
           <h1 className="display-4 fw-bold mb-3">Welcome to My Portfolio</h1>
           <p className="lead mb-4">
-            I’m <strong>Tshepo Setuke</strong> — Developer, Tech Enthusiast, and Creator.
+            I’m <strong>Tshepo Setuke</strong> — Developer, Tech Enthusiast, and
+            Creator.
           </p>
           <Link to="/projects" className="btn btn-light btn-lg">
             View My Work
