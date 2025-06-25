@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import PlanetParticles from "./PlanetParticles";
+import { motion } from "framer-motion";
+import vader from "../assets/vader.jpg"; // adjust path as needed
+
 
 const Hero = () => {
   const particlesInit = async (engine) => {
@@ -78,6 +81,28 @@ const Hero = () => {
 
       {/* Planet Forming Animation (3D) */}
       <PlanetParticles />
+
+
+
+      // Inside your component, add this between PlanetParticles and the glass card
+      <motion.img
+        src={vader}
+        alt="Darth Vader"
+        initial={{ opacity: 0, x: -100, scale: 1.1 }}
+        animate={{ opacity: 1, x: 0, scale: 1 }}
+        transition={{ duration: 2.5, ease: "easeOut" }}
+        style={{
+          position: "absolute",
+          bottom: "0",
+          left: "-15rem", // Pushes Vader to the left
+          maxHeight: "85vh",
+          objectFit: "contain",
+          zIndex: 1,
+          pointerEvents: "none",
+        }}
+      />
+
+
 
       {/* Hero Content with Glassmorphism */}
       <div

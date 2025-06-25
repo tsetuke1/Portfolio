@@ -1,0 +1,11 @@
+@keyframes glowPulse {
+  0% {
+    filter: drop-shadow(0 0 10px black);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px black);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px black);
+  }
+}
