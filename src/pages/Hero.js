@@ -6,7 +6,6 @@ import PlanetParticles from "./PlanetParticles";
 import { motion } from "framer-motion";
 import vader from "../assets/vader.jpg"; // adjust path as needed
 
-
 const Hero = () => {
   const particlesInit = async (engine) => {
     await loadSlim(engine);
@@ -78,13 +77,10 @@ const Hero = () => {
           height: "100%",
         }}
       />
-
       {/* Planet Forming Animation (3D) */}
       <PlanetParticles />
-
-
-
-      // Inside your component, add this between PlanetParticles and the glass card
+      // Inside your component, add this between PlanetParticles and the glass
+      card
       <motion.img
         src={vader}
         alt="Darth Vader"
@@ -94,16 +90,19 @@ const Hero = () => {
         style={{
           position: "absolute",
           bottom: "0",
-          left: "-15rem", // Pushes Vader to the left
-          maxHeight: "85vh",
-          objectFit: "contain",
+          left: "-12rem",
+          maxHeight: "90vh",
+          objectFit: "cover",
           zIndex: 1,
           pointerEvents: "none",
+          filter: "drop-shadow(0 0 20px red) brightness(1.2) contrast(1.1)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.1))",
+          maskImage:
+            "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.1))",
+          mixBlendMode: "screen",
         }}
       />
-
-
-
       {/* Hero Content with Glassmorphism */}
       <div
         className="d-flex flex-column justify-content-center align-items-center text-center p-5"
